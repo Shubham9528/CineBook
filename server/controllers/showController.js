@@ -101,7 +101,7 @@ export const getShows = async (req, res) => {
             _id: {$in: movieIds}
         }).sort({ release_date: -1 }); // or whatever sort you prefer
         
-        console.log(shows);
+       
         
         res.json({success: true, shows})
     } catch (error) {
