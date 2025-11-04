@@ -11,7 +11,7 @@ const HeroSection = () => {
   return (
     <div className='flex flex-col items-start justify-center gap-8 px-6 md:px-16 lg:px-36 bg-cover bg-center h-screen pt-32' style={{backgroundImage: `url(${backgroundImage2})`}}>
 
-      <h1 className='text-5xl md:text-[70px] md:leading-18 font-semibold max-w-110'>CineMax</h1>
+      <h1 className='text-3xl md:text-5xl md:leading-14 font-semibold max-w-110'>Your Movie Journey Starts Here.</h1>
 
       <div className='flex items-center gap-4 text-gray-300'>
         <span>Book • Watch • Enjoy</span>
