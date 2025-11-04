@@ -89,14 +89,21 @@ export const addShow = async (req, res) =>{
 }
 
 // API to get all shows from the database
-export const getShows = async (req, res) =>{
+export const getShows = async (req, res) => {
     try {
-        const shows = await Show.find({showDateTime: {$gte: new Date()}}).populate('movie').sort({ showDateTime: 1 });
+        // Get distinct movie IDs only (no populate yet)
+        const movieIds = await Show.distinct('movie', {
+            showDateTime: {$gte: new Date()}
+        });
 
-        // filter unique shows
-        const uniqueShows = new Set(shows.map(show => show.movie))
-
-        res.json({success: true, shows: Array.from(uniqueShows)})
+        // Fetch only the unique movies that exist
+        const shows = await Movie.find({
+            _id: {$in: movieIds}
+        }).sort({ release_date: -1 }); // or whatever sort you prefer
+        
+        console.log(shows);
+        
+        res.json({success: true, shows})
     } catch (error) {
         console.error(error);
         res.json({ success: false, message: error.message });

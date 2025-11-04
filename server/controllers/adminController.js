@@ -12,17 +12,23 @@ export const isAdmin = async (req, res) =>{
 export const getDashboardData = async (req, res) =>{
     try {
         const bookings = await Booking.find({isPaid: true});
-        const activeShows = await Show.find({showDateTime: {$gte: new Date()}}).populate('movie');
+        const activeShows = await Show.find({showDateTime: {$gte: new Date()}})
+            .populate('movie')
+    
+
+        // Filter out shows with missing movie data
+        const validActiveShows = activeShows.filter(show => show.movie !== null);
 
         const totalUser = await User.countDocuments();
 
         const dashboardData = {
             totalBookings: bookings.length,
             totalRevenue: bookings.reduce((acc, booking)=> acc + booking.amount, 0),
-            activeShows,
+            activeShows: validActiveShows,
             totalUser
         }
-
+       
+        
         res.json({success: true, dashboardData})
     } catch (error) {
         console.error(error);
