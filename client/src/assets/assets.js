@@ -16,22 +16,28 @@ export const assets = {
 
 export const dummyTrailers = [
     {
-        image: "https://img.youtube.com/vi/WpW36ldAqnM/maxresdefault.jpg",
-        videoUrl: 'https://www.youtube.com/watch?v=WpW36ldAqnM'
+        image: "https://img.youtube.com/vi/3KYBmLgux3A/maxresdefault.jpg",
+        videoUrl: 'https://www.youtube.com/watch?v=3KYBmLgux3A' // Must See Movies [2025 - 2026]
     },
     {
-        image: "https://img.youtube.com/vi/-sAOWhvheK8/maxresdefault.jpg",
-        videoUrl: 'https://www.youtube.com/watch?v=-sAOWhvheK8'
+        image: "https://img.youtube.com/vi/ssZU6xUM-YI/maxresdefault.jpg",
+        videoUrl: 'https://www.youtube.com/watch?v=ssZU6xUM-YI' // Official Trailer 2 [HD] - Only In Theaters This Christmas
     },
     {
-        image: "https://img.youtube.com/vi/1pHDWnXmK7Y/maxresdefault.jpg",
-        videoUrl: 'https://www.youtube.com/watch?v=1pHDWnXmK7Y'
+        image: "https://img.youtube.com/vi/UJrghaPJ0RY/maxresdefault.jpg",
+        videoUrl: 'https://www.youtube.com/watch?v=UJrghaPJ0RY' // Scream 7 Official Trailer
     },
     {
-        image: "https://img.youtube.com/vi/umiKiW4En9g/maxresdefault.jpg",
-        videoUrl: 'https://www.youtube.com/watch?v=umiKiW4En9g'
+        image: "https://img.youtube.com/vi/6cWp9zVu28s/maxresdefault.jpg",
+        videoUrl: 'https://www.youtube.com/watch?v=6cWp9zVu28s' // The Best Upcoming Movies 2025 & 2026
     },
+    
+    {
+        image: "https://img.youtube.com/vi/g7BjKdUIKw0/maxresdefault.jpg",
+        videoUrl: 'https://www.youtube.com/watch?v=g7BjKdUIKw0' // NEW MOVIE TRAILERS 2025 & 2026 (Action) 4K ULTRA HD
+    }
 ]
+
 
 const dummyCastsData = [
     { "name": "Milla Jovovich", "profile_path": "https://image.tmdb.org/t/p/original/usWnHCzbADijULREZYSJ0qfM00y.jpg", },
