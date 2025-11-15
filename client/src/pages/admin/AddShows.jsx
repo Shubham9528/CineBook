@@ -44,6 +44,7 @@ const AddShows = () => {
             }
             return prev;
         });
+        setDateTimeInput("")
     };
 
     const handleRemoveTime = (date, time) => {
@@ -58,6 +59,7 @@ const AddShows = () => {
                 [date]: filteredTimes,
             };
         });
+        
     };
 
     const handleSubmit = async ()=>{
@@ -82,6 +84,7 @@ const AddShows = () => {
                 toast.success(data.message)
                 setSelectedMovie(null)
                 setDateTimeSelection({})
+                setDateTimeInput("")
                 setShowPrice("")
             }else{
                 toast.error(data.message)
